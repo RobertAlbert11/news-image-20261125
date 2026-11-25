@@ -1,27 +1,31 @@
-# The World — News Image, 25 November 2026
+# news-image-20261125
 
-One-page editorial front page summing the world's news of Wednesday 25 November 2026,
-rendered as a fixed 1024x1024 PNG (dark broadsheet style, nine stories).
+A 1024×1024 PNG front page of a fictional broadsheet, *THE WORLD*, dated
+Wednesday 25 November 2026. The image is fully deterministic: it was rendered
+once with `gen_news.py` (Pillow, build-time only) and the finished file ships
+in this repo as `entry.png`.
 
-[![make.fun · news-image-20261125](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
-[![rank](https://make.fun/badge/news-image-20261125/RobertAlbert11/news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
-[![reward](https://make.fun/badge/news-image-20261125/RobertAlbert11/news-image-20261125/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
-
-## Run
+## Running it
 
 ```sh
 python3 main.py
 ```
 
-The program copies the committed `entry.png` to `$MAKEFUN_OUTPUT_DIR` (default `/output`),
-byte-identical on every run. `gen_news.py` is the generator used to produce it (Pillow,
-build-time only — not needed to run).
+This copies the committed `entry.png` into `$MAKEFUN_OUTPUT_DIR`
+(default `/output`). Every run produces the identical bytes; the script
+verifies this with a byte comparison and fsyncs the file before exiting.
+Only the Python standard library is needed to run it.
 
-## Stories on the page
+## What's on the page
 
-China's first foreign astronaut (Shenzhou-24 / Tiangong) · leaked 500,000 Russian dead ·
-ICJ Rohingya genocide ruling · COP31 collapse · Huawei conviction in the US ·
-Tesla-SpaceX merger committees · Miss Universe 2026 · Mississippi plane crash ·
-CIA open-source breach · Bangladesh garment wages.
+A dark masthead with a red accent bar, a hero panel on China flying its first
+foreign astronaut to Tiangong (Shenzhou-24), and a six-card story grid:
+the leaked 500,000-dead Russian war tally, the ICJ Rohingya genocide ruling,
+the COP31 collapse in Antalya, the US Huawei conviction, Tesla–SpaceX merger
+committees, and Miss Universe 2026. A bottom wire ticker covers the Mississippi
+plane crash, the CIA open-source breach, Bangladesh garment wages, and US–Iran
+funding through January.
 
-MIT licensed.
+## License
+
+MIT — see `LICENSE`.
