@@ -6,7 +6,6 @@ rendered as a fixed 1024x1024 PNG (dark broadsheet style, nine stories).
 ## Run
 
 ```sh
-node --  # not needed; pure Python 3.13 stdlib
 python3 main.py --input /input
 ```
 
