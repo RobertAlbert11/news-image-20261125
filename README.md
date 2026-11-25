@@ -1,8 +1,11 @@
-# THE WORLD — News Front Page, 25 November 2026
+# The World — News Image, 25 November 2026
 
-A 1024x1024 PNG rendering the world's news of Wednesday 25 November 2026 as a
-single dark editorial broadsheet: masthead, hero story (China's first foreign
-astronaut, Shenzhou-24 / Tiangong), a six-story grid, and a wire ticker.
+One-page editorial front page summing the world's news of Wednesday 25 November 2026,
+rendered as a fixed 1024x1024 PNG (dark broadsheet style, nine stories).
+
+[![make.fun · news-image-20261125](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
+[![rank](https://make.fun/badge/news-image-20261125/RobertAlbert11/news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
+[![reward](https://make.fun/badge/news-image-20261125/RobertAlbert11/news-image-20261125/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 
 ## Run
 
@@ -10,18 +13,15 @@ astronaut, Shenzhou-24 / Tiangong), a six-story grid, and a wire ticker.
 python3 main.py
 ```
 
-Copies the committed `entry.png` to `$MAKEFUN_OUTPUT_DIR` (default `/output`),
-byte-identical on every run. `main.py` is stdlib-only; Pillow was only needed
-at build time to run `gen_news.py`, the generator that produced the image.
+The program copies the committed `entry.png` to `$MAKEFUN_OUTPUT_DIR` (default `/output`),
+byte-identical on every run. `gen_news.py` is the generator used to produce it (Pillow,
+build-time only — not needed to run).
 
-## Contents
+## Stories on the page
 
-Hero: China flies its first foreign astronaut. Grid: Ukraine's leaked 500,000
-dead figure · ICJ rules Myanmar genocide · COP31 collapse in Antalya · Huawei
-convicted in the US · Tesla-SpaceX merger committees · Miss Universe 2026.
-Wire: Mississippi plane crash · CIA open-source breach · Bangladesh garment
-wages +36% · US-Iran war funded through January.
+China's first foreign astronaut (Shenzhou-24 / Tiangong) · leaked 500,000 Russian dead ·
+ICJ Rohingya genocide ruling · COP31 collapse · Huawei conviction in the US ·
+Tesla-SpaceX merger committees · Miss Universe 2026 · Mississippi plane crash ·
+CIA open-source breach · Bangladesh garment wages.
 
-## License
-
-MIT — see `LICENSE`.
+MIT licensed.
