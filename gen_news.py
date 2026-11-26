@@ -82,47 +82,47 @@ brush.text(((S - brush.textlength('EVERY STORY THAT MATTERED, ON A SINGLE SHEET'
            'EVERY STORY THAT MATTERED, ON A SINGLE SHEET', font=face('tick', 15), fill=AMBER)
 
 # ------------------------------------------------------- hero: space story
-TOP, BOT = 184, 452
+TOP, BOT = 172, 404
 brush.rectangle([MARGIN, TOP, EDGE, BOT], fill=CARD)
 brush.rectangle([MARGIN, TOP, MARGIN + 8, BOT], fill=RED)
 brush.rectangle([MARGIN, TOP, EDGE, TOP, ], outline=HAIR, width=1)
 hx = MARGIN + 26
-brush.text((hx, TOP + 16), 'SPACE · BEIJING · PAGE A1', font=face('kick', 15), fill=RED)
-brush.text((hx, TOP + 40), 'BY OUR SPACE CORRESPONDENT', font=face('tick', 12), fill=ASH)
-brush.text((hx, TOP + 62), 'CHINA FLIES ITS FIRST', font=face('head', 44), fill=INK)
-brush.text((hx, TOP + 112), 'FOREIGN ASTRONAUT', font=face('head', 44), fill=INK)
+brush.text((hx, TOP + 14), 'SPACE · BEIJING · PAGE A1', font=face('kick', 15), fill=RED)
+brush.text((hx, TOP + 38), 'BY OUR SPACE CORRESPONDENT', font=face('tick', 12), fill=ASH)
+brush.text((hx, TOP + 58), 'CHINA FLIES ITS FIRST', font=face('head', 38), fill=INK)
+brush.text((hx, TOP + 102), 'FOREIGN ASTRONAUT', font=face('head', 38), fill=INK)
 hero_body = ("Shenzhou-24 is docked at Tiangong with Pakistan's Ali aboard — "
              "the first foreign national to live on the Chinese station, "
              "crowned by a state broadcast watched by 900 million.")
-draw_lines(hx, TOP + 164, wrap(hero_body, face('body', 18), 600),
-           face('body', 18), INK_SOFT, 24)
-brush.text((hx, BOT - 24), 'BEIJING, TUESDAY NIGHT —', font=face('tick', 13), fill=AMBER)
+draw_lines(hx, TOP + 146, wrap(hero_body, face('body', 16), 560),
+           face('body', 16), INK_SOFT, 21)
+brush.text((hx, BOT - 22), 'BEIJING, TUESDAY NIGHT —', font=face('tick', 13), fill=AMBER)
 
 # rocket illustration, right side of the hero panel
-cx, cy = 880, 310
-brush.polygon([(cx, cy - 88), (cx + 24, cy - 12), (cx - 24, cy - 12)], fill=(150, 154, 164))
-brush.rectangle([cx - 24, cy - 12, cx + 24, cy + 56], fill=(150, 154, 164))
-brush.polygon([(cx - 24, cy + 18), (cx - 46, cy + 66), (cx - 24, cy + 56)], fill=RED)
-brush.polygon([(cx + 24, cy + 18), (cx + 46, cy + 66), (cx + 24, cy + 56)], fill=RED)
-brush.ellipse([cx - 11, cy - 2, cx + 11, cy + 20], fill=STEEL)
-brush.polygon([(cx - 13, cy + 58), (cx + 13, cy + 58), (cx, cy + 122)], fill=AMBER)
-for sx, sy in [(800, 214), (944, 200), (962, 268), (806, 420), (952, 424)]:
+cx, cy = 880, 280
+brush.polygon([(cx, cy - 80), (cx + 22, cy - 10), (cx - 22, cy - 10)], fill=(150, 154, 164))
+brush.rectangle([cx - 22, cy - 10, cx + 22, cy + 48], fill=(150, 154, 164))
+brush.polygon([(cx - 22, cy + 16), (cx - 42, cy + 60), (cx - 22, cy + 50)], fill=RED)
+brush.polygon([(cx + 22, cy + 16), (cx + 42, cy + 60), (cx + 22, cy + 50)], fill=RED)
+brush.ellipse([cx - 10, cy - 2, cx + 10, cy + 18], fill=STEEL)
+brush.polygon([(cx - 12, cy + 50), (cx + 12, cy + 50), (cx, cy + 108)], fill=AMBER)
+for sx, sy in [(806, 198), (942, 188), (960, 248), (812, 384), (950, 388)]:
     brush.ellipse([sx, sy, sx + 3, sy + 3], fill=ASH)
-brush.line([EDGE - 330, TOP + 16, EDGE - 330, BOT - 16], fill=HAIR, width=1)
+brush.line([EDGE - 300, TOP + 14, EDGE - 300, BOT - 14], fill=HAIR, width=1)
 # small region-color legend under the divider column
-lx = EDGE - 314
-brush.text((lx, TOP + 20), 'REGIONS COVERED', font=face('kick', 11), fill=INK)
+lx = EDGE - 286
+brush.text((lx, TOP + 18), 'REGIONS COVERED', font=face('kick', 11), fill=INK)
 for k, (nm, hue) in enumerate([('EUROPE', RED), ('ASIA', STEEL), ('AMERICAS', JADE),
                                ('AFRICA', AMBER), ('MIDEAST', PLUM)]):
-    yy = TOP + 42 + k * 18
+    yy = TOP + 38 + k * 17
     brush.ellipse([lx, yy, lx + 8, yy + 8], fill=hue)
     brush.text((lx + 14, yy - 3), nm, font=face('tick', 11), fill=INK_SOFT)
-# world dot-map (5 rows x 14 cols, colored by region)
-mx, my = EDGE - 314, TOP + 140
+# world dot-map (5 rows x 12 cols, colored by region)
+mx, my = EDGE - 286, TOP + 130
 for r in range(5):
-    for c in range(14):
+    for c in range(12):
         hue = [RED, STEEL, JADE, AMBER, PLUM][(r * 3 + c) % 5]
-        if (r * 14 + c) % 7 != 3:
+        if (r * 12 + c) % 7 != 3:
             brush.ellipse([mx + c * 20, my + r * 20, mx + c * 20 + 9, my + r * 20 + 9], fill=hue)
 
 # ------------------------------------------------------------ story grid
@@ -155,7 +155,7 @@ cells = [
 ]
 GX, GY = 12, 10
 CW = (EDGE - MARGIN - 2 * GX) // 3
-CH = 104
+CH = 84
 gy0 = BOT + 14
 for idx, (tag, hue, title, blurb) in enumerate(cells):
     col, row = idx % 3, idx // 3
@@ -170,46 +170,38 @@ for idx, (tag, hue, title, blurb) in enumerate(cells):
     draw_lines(x + 12, y + 26 + len(tlines[:2]) * 18 + 4, bl[:2],
                face('body', 12), INK_SOFT, 15)
     src = ['Reuters', 'AP', 'AFP', 'Bloomberg', 'Nikkei', 'Guardian'][idx % 6]
-    brush.text((x + 12, y + CH - 16), 'via %s · %02d:%02d UTC' % (src, 3 + idx, 15 + (idx * 7) % 45),
+    brush.text((x + CW - 116, y + 9), 'via %s' % src,
                font=face('tick', 9), fill=ASH)
-    brush.text((x + CW - 34, y + CH - 16), 'A%d' % (idx + 2),
-               font=face('tick', 11), fill=HAIR)
+    brush.text((x + CW - 34, y + 9), 'A%d' % (idx + 2),
+               font=face('tick', 9), fill=HAIR)
 
-# ------------------------------------------ market sparkline strip (colored)
-sy0 = gy0 + 4 * (CH + GY) + 4
-brush.line([MARGIN, sy0, EDGE, sy0], fill=HAIR, width=1)
-brush.text((MARGIN, sy0 + 7), 'MARKETS', font=face('kick', 12), fill=INK)
-series = [('-6.2%', RED, [8, 6, 7, 5, 6, 4, 3, 4, 2, 1]),
-          ('+1.4%', JADE, [3, 4, 3, 5, 4, 6, 5, 7, 8, 9]),
-          ('-0.8%', STEEL, [6, 5, 6, 4, 5, 4, 3, 4, 3, 2]),
-          ('+2.1%', AMBER, [2, 3, 2, 4, 5, 4, 6, 7, 8, 10])]
-sx = MARGIN + 110
-for label, hue, vals in series:
-    brush.text((sx, sy0 + 7), label, font=face('tick', 12), fill=hue)
-    px = sx + 62
-    for j, v in enumerate(vals):
-        brush.line([px + j * 6, sy0 + 28 - v * 2, px + j * 6 + 4, sy0 + 28 - v * 2],
-                   fill=hue, width=2)
-    sx += 230
+# ------------------------------------------ wire: one-liners (dense stories)
+wy0 = gy0 + 4 * (CH + GY) + 8
+brush.line([MARGIN, wy0, EDGE, wy0], fill=INK, width=2)
+brush.text((MARGIN, wy0 + 6), 'MORE FROM THE WIRE', font=face('kick', 13), fill=INK)
+brush.text((EDGE - 260, wy0 + 7), '25 NOVEMBER 2026 · 33 STORIES · 7 REGIONS',
+           font=face('tick', 12), fill=INK_SOFT)
+wire = [
+    ('06:12 UTC', RED,    'Bangladesh garment wages rise 36% under the new accord.'),
+    ('07:40 UTC', STEEL,  'UK regulator lifts the energy cap to £2,166 from January.'),
+    ('09:05 UTC', AMBER,  'Fuel tanker fire south of Cairo kills at least 30.'),
+    ('10:22 UTC', JADE,   'Flooded West Java gold mine: 9 dead, 17 still trapped.'),
+    ('11:48 UTC', PLUM,   'US tariff schedules take effect on 14 trading partners.'),
+    ('13:10 UTC', RED,    'Mississippi Delta plane crash docket opens; recorders found.'),
+    ('15:31 UTC', STEEL,  'US-Iran war funding extended by Congress through January.'),
+]
+for k, (t_, hue, line) in enumerate(wire):
+    yy = wy0 + 26 + k * 17
+    brush.text((MARGIN + 4, yy), t_, font=face('tick', 12), fill=hue)
+    brush.text((MARGIN + 110, yy), line, font=face('body', 13), fill=INK_SOFT)
 
-# --------------------------------------------------- UTC timeline + ticker
-fy = sy0 + 36
-brush.line([MARGIN, fy, EDGE, fy], fill=INK, width=2)
-brush.text((MARGIN, fy + 8), 'THE DAY IN UTC', font=face('kick', 13), fill=INK)
-tl = ('00:00 CIA open-source system breached · 04:00 Kospi closes -6.2% · '
-      '07:00 UK cap to £2,166 · 09:00 tanker fire near Cairo · '
-      '12:00 ICJ genocide ruling · 18:00 Tiangong docking confirmed')
-brush.text((MARGIN + 150, fy + 8), tl, font=face('tick', 12), fill=INK_SOFT)
-brush.text((EDGE - 300, fy + 26), 'MISSISSIPPI CRASH PROBED · BANGLADESH GARMENT WAGES +36% · US-IRAN WAR FUNDED THROUGH JANUARY',
-           font=face('tick', 11), fill=ASH)
-brush.line([MARGIN, fy + 46, EDGE, fy + 46], fill=HAIR, width=1)
-brush.text((MARGIN, fy + 56), 'THE WORLD — page one of one',
-           font=face('tick', 13), fill=ASH)
-brush.text(((S - brush.textlength('25 NOVEMBER 2026 · 50 STORIES · 7 REGIONS', font=face('tick', 13))) / 2, fy + 56),
-           '25 NOVEMBER 2026 · 50 STORIES · 7 REGIONS',
-           font=face('tick', 13), fill=INK)
-brush.text((EDGE - 170, fy + 56), '© MMDCCVI THE WORLD',
-           font=face('tick', 13), fill=ASH)
+# --------------------------------------------------- folio footer
+fy = wy0 + 26 + len(wire) * 17 + 8
+brush.line([MARGIN, fy, EDGE, fy], fill=HAIR, width=1)
+brush.text((MARGIN, fy + 8), 'THE WORLD — page one of one',
+           font=face('tick', 12), fill=ASH)
+brush.text((EDGE - 170, fy + 8), '© MMDCCVI THE WORLD',
+           font=face('tick', 12), fill=ASH)
 
 page.save('/home/hermes2/makefun/news-image/repo/entry.png', 'PNG', optimize=True)
 print('rendered', page.size)

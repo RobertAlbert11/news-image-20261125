@@ -30,10 +30,11 @@ and a `via <agency> · HH:MM UTC` source line (Ukraine's leaked 500,000-dead
 tally, the ICJ Rohingya genocide ruling, the COP31 collapse in Antalya, the
 US Huawei conviction, Tesla–SpaceX merger committees, Miss Universe 2026,
 Kospi −6.2% on AI doubts, the UK energy cap rising 26% to £2,166, the Cairo
-tanker fire, the flooded West Java gold mine, US tariffs on 14 economies, the
-Mississippi plane crash probe); a four-sparkline MARKETS strip; a UTC timeline
-of the day (CIA open-source breach, Bangladesh garment wages +36%, US–Iran
-war funding through January); and a folio footer.
+fires, the flooded West Java gold mine, US tariffs on 14 economies, the
+Mississippi plane crash probe); a "MORE FROM THE WIRE" band of timestamped
+one-liners (Bangladesh garment wages +36%, the UK energy cap, the Cairo tanker
+fire, the West Java mine, US tariffs, the Mississippi docket, US–Iran funding);
+a folio footer.
 
 ## License
 
