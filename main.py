@@ -1,10 +1,7 @@
 """Ship the committed front page: copy entry.png to the output dir, byte-exact.
 
-Stdlib only. The render (gen_news.py) happens at build time; this script is
-what the competition runner executes. It resolves the source next to itself,
-creates the destination directory if needed, copies the file, then verifies
-the destination byte-for-byte against the source, fsyncs it, and prints the
-result. Any failure exits non-zero.
+Round-5 edition. Stdlib only. The render (gen_news.py) happens at build time;
+this script is what the competition runner executes.
 """
 import os
 import shutil
@@ -16,6 +13,8 @@ OUT = os.environ.get('MAKEFUN_OUTPUT_DIR', '/output')
 
 def main():
     src = os.path.join(HERE, 'entry.png')
+    if not os.path.isfile(src):
+        sys.exit('ERROR: source entry.png missing at {}'.format(src))
     os.makedirs(OUT, exist_ok=True)
     dst = os.path.join(OUT, 'entry.png')
     shutil.copyfile(src, dst)
@@ -24,7 +23,8 @@ def main():
             sys.exit('ERROR: {} does not match source {}'.format(dst, src))
     with open(dst, 'rb') as f:
         os.fsync(f.fileno())
-    print('entry.png ->', OUT, '(verified byte-identical)')
+    print('entry.png ->', OUT, '(verified byte-identical, {})'.format(
+        os.path.getsize(dst)))
 
 
 if __name__ == '__main__':

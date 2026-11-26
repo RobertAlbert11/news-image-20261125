@@ -1,9 +1,9 @@
 # news-image-20261125
 
-One sheet, every story that mattered. This repo renders a fictional 1024×1024
-newspaper front page — *THE WORLD*, dated Wednesday 25 November 2026 — with a
-Pillow-based generator (`gen_news.py`, run once at build time). The finished
-image ships in the repo as `entry.png`; nothing is drawn at runtime.
+This is my take on 25 November's world news, set as a single printed sheet:
+*THE WORLD*, Wednesday 25 November 2026, rendered at 1024×1024 with a Pillow
+generator (`gen_news.py`, run once at build time). The finished page is
+committed as `entry.png`; nothing is drawn at runtime.
 
 [![make.fun · news-image-20261125](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 [![rank](https://make.fun/badge/news-image-20261125/RobertAlbert11/news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
@@ -22,14 +22,18 @@ standard library is required.
 
 ## What's on the page
 
-A centred masthead with volume/edition folio and price, a dominant hero panel
-on China flying its first foreign astronaut to Tiangong (Shenzhou-24) with a
-rocket illustration, a disciplined six-card grid carrying datelines, bylines
-and page folios (Ukraine's leaked 500,000-dead tally, the ICJ Rohingya
-genocide ruling, the COP31 collapse in Antalya, the US Huawei conviction,
-Tesla–SpaceX merger committees, Miss Universe 2026), and a bottom wire ticker
-with the Mississippi plane crash, the CIA open-source breach, Bangladesh
-garment wages, and US–Iran funding through January.
+A dark masthead band with volume folio, edition and price; a hero panel on
+China flying its first foreign astronaut to Tiangong with a rocket drawing and
+a color-coded region legend; a dot-map of the five covered regions; a dense
+three-column grid of twelve story cards, each with a dateline kicker, blurb
+and a `via <agency> · HH:MM UTC` source line (Ukraine's leaked 500,000-dead
+tally, the ICJ Rohingya genocide ruling, the COP31 collapse in Antalya, the
+US Huawei conviction, Tesla–SpaceX merger committees, Miss Universe 2026,
+Kospi −6.2% on AI doubts, the UK energy cap rising 26% to £2,166, the Cairo
+tanker fire, the flooded West Java gold mine, US tariffs on 14 economies, the
+Mississippi plane crash probe); a four-sparkline MARKETS strip; a UTC timeline
+of the day (CIA open-source breach, Bangladesh garment wages +36%, US–Iran
+war funding through January); and a folio footer.
 
 ## License
 
