@@ -82,10 +82,10 @@ brush.text((hx, TOP + 192), 'ASTRONAUT', font=face('head', 54), fill=BRIGHT)
 hero_body = ("Shenzhou-24 is docked at Tiangong with Pakistan's Ali aboard — "
              "the first foreign national to live on the Chinese station, "
              "crowned by a state broadcast watched by 900 million.")
-draw_lines(hx, TOP + 258, wrap(hero_body, face('body', 21), EDGE - hx - 420),
+draw_lines(hx, TOP + 252, wrap(hero_body, face('body', 21), EDGE - hx - 420),
            face('body', 21), (208, 210, 218), 29)
 # dateline chip at hero bottom
-brush.text((hx, BOT - 30), 'BEIJING, TUESDAY NIGHT —', font=face('tick', 14), fill=AMBER)
+brush.text((hx, BOT - 26), 'BEIJING, TUESDAY NIGHT —', font=face('tick', 14), fill=AMBER)
 
 # simple rocket illustration, right side of the hero panel
 cx, cy = 862, 330
@@ -101,17 +101,17 @@ brush.line([EDGE - 380, TOP + 20, EDGE - 380, BOT - 20], fill=RULE, width=1)
 
 # ------------------------------------------------------------ story grid
 cells = [
-    ('WAR', RED, 'UKRAINE: 500,000 DEAD',
+    ('WAR · KYIV', RED, 'UKRAINE: 500,000 DEAD',
      "A leaked Russian tally exposes the war's true toll; Kyiv's bridges and power grid hit overnight."),
-    ('COURT', STEEL, 'ICJ: MYANMAR GENOCIDE',
+    ('COURT · THE HAGUE', STEEL, 'ICJ: MYANMAR GENOCIDE',
      'The World Court rules the campaign against the Rohingya amounted to genocide.'),
-    ('CLIMATE', JADE, 'COP31 FALLS APART',
+    ('CLIMATE · ANTALYA', JADE, 'COP31 FALLS APART',
      'Talks end in acrimony at Antalya as the EU delegation walks out; pledges stall.'),
-    ('COURT', STEEL, 'HUAWEI GUILTY IN US',
+    ('COURT · WASHINGTON', STEEL, 'HUAWEI GUILTY IN US',
      'Convicted of sanctions breaches, bank fraud and stealing trade secrets.'),
-    ('TECH', AMBER, 'TESLA-SPACEX PANELS',
+    ('TECH · AUSTIN', AMBER, 'TESLA-SPACEX PANELS',
      'Directors seated on five committees to weigh an all-stock combination.'),
-    ('CULTURE', ASH, 'MISS UNIVERSE 2026',
+    ('CULTURE · BANGKOK', ASH, 'MISS UNIVERSE 2026',
      "Jennifer Barreto of Puerto Rico wins the pageant's 75th crown."),
 ]
 
