@@ -2,8 +2,11 @@
 
 This is my take on 25 November's world news, set as a single printed sheet:
 *THE WORLD*, Wednesday 25 November 2026, rendered at 1024×1024 with a Pillow
-generator (`gen_news.py`, run once at build time). The finished page is
-committed as `entry.png`; nothing is drawn at runtime.
+generator (`gen_news.py`, run once at build time). A dark broadsheet: bold
+masthead with folio and price, a dominant hero on China flying its first
+foreign astronaut, six story cards, and "THE DAY IN UTC" — a timestamped
+wire of eight more headlines (33 stories, 7 regions in all). The finished
+page is committed as `entry.png`; nothing is drawn at runtime.
 
 [![make.fun · news-image-20261125](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 [![rank](https://make.fun/badge/news-image-20261125/RobertAlbert11/news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
